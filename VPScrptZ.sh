@@ -43,7 +43,7 @@ ln -fs /usr/share/zoneinfo/Asia/Manila /etc/localtime
 sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 
 # set repo
-echo 'deb http://download.webmin.com/download/repository sarge contrib' >> /etc/apt/sources.list
+echo 'deb http://download.webmin.com/download/repository sarge contrib' >> /etc/apt/sources.list.d/webmin.list
 wget "http://www.dotdeb.org/dotdeb.gpg"
 cat dotdeb.gpg | apt-key add -;rm dotdeb.gpg
 wget -qO - http://www.webmin.com/jcameron-key.asc | apt-key add -
